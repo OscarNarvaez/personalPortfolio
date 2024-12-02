@@ -368,6 +368,25 @@ img {
     height: auto
 }
 
+.img-bordered {
+    border: 5px solid #575757; /* Cambia el color y el grosor del borde según tus necesidades */
+    padding: 10px; /* Opcional: añade un relleno dentro del borde */
+    border-radius: 10px; /* Opcional: añade esquinas redondeadas */
+}
+
+.fade-in-from-top {
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: fadeInFromTop 2s ease-out forwards;
+}
+
+@keyframes fadeInFromTop {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .img-rounded {
     border-radius: 0
 }
@@ -3347,6 +3366,15 @@ input[type=submit].btn-block {
 
 .fade.in {
     opacity: 1
+}
+
+.centered-navbar {
+    display: flex;
+    justify-content: center;
+}
+
+.centered-navbar ul li a {
+    font-size: 20px;
 }
 
 .collapse {
