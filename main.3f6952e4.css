@@ -3376,8 +3376,13 @@ input[type=submit].btn-block {
 }
 
 .navbar .centered-navbar {
-    display: flex;
     justify-content: center;
+}
+
+@media (min-width:768px) {
+    .navbar .centered-navbar {
+        display: flex;
+    }
 }
 
 .navbar .centered-navbar ul li a {
