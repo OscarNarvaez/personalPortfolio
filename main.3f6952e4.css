@@ -6274,6 +6274,38 @@ body {
     margin: 0;
 }
 
+.social-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 16px;
+    border: 1px solid rgba(255, 255, 255, .75);
+    border-radius: 999px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: .3px;
+    transition: all .2s ease;
+}
+
+.social-button i {
+    font-size: 18px;
+}
+
+.social-button:hover,
+.social-button:focus {
+    color: #1a1a1a;
+    background-color: #fff;
+    border-color: #fff;
+    text-decoration: none;
+}
+
+.social-button:focus {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
 .contact-gif-wrap {
     display: flex;
     justify-content: center;
@@ -6377,6 +6409,11 @@ body {
 
     .social-links {
         gap: 10px;
+    }
+
+    .social-button {
+        padding: 9px 14px;
+        font-size: 14px;
     }
 
     .works .card-container h3 {
