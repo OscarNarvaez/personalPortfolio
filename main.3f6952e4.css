@@ -6437,3 +6437,30 @@ body {
         opacity: 1;
     }
 }
+
+/* Section entrance animation */
+.section-entrance {
+    opacity: 0;
+    transform: translate3d(0, 34px, 0);
+    filter: blur(1px);
+    transition: opacity .82s ease, transform .82s ease, filter .82s ease;
+    transition-delay: var(--entrance-delay, 0ms);
+    will-change: opacity, transform;
+}
+
+.section-entrance.is-visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    filter: blur(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .section-entrance,
+    .section-entrance.is-visible {
+        opacity: 1;
+        transform: none;
+        filter: none;
+        transition: none;
+    }
+}
