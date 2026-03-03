@@ -6312,7 +6312,7 @@ body {
 }
 
 .contact-gif-wrap img {
-    width: min(100%, 560px);
+    width: min(100%, 420px);
     height: auto;
 }
 
