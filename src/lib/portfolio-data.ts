@@ -26,4 +26,10 @@ export const defaultProjects = [
         url: "https://oscarnarvaez.github.io/Spa-Belleza/",
         image: "/images/work03-hover.jpg",
     },
+    {
+        title: "AWALA Colombia",
+        description: "Sitio web institucional",
+        url: "https://awalacolombia.org",
+        image: "/images/work001-04.jpg",
+    },
 ];
