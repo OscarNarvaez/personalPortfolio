@@ -1,5 +1,6 @@
 import { profile } from "@/lib/portfolio-data";
 import Image from "next/image";
+import { withBasePath } from "@/lib/base-path";
 
 export default function ContactPage() {
     return (
@@ -75,7 +76,7 @@ export default function ContactPage() {
 
                                 <div className="contact-gif-wrap centered-navbar fade-in-from-top">
                                     <Image
-                                        src="/images/programingV.gif"
+                                        src={withBasePath("/images/programingV.gif")}
                                         className="img-responsive"
                                         alt="Programming animation"
                                         width={600}

@@ -1,11 +1,12 @@
 import { HomeHeroEffects } from "@/components/HomeHeroEffects";
+import { withBasePath } from "@/lib/base-path";
 
 export default function HomePage() {
     return (
         <>
             <div
                 className="hero-full-container background-image-container white-text-container fade-in-from-top"
-                style={{ backgroundImage: "url('/images/space.jpg')" }}
+                style={{ backgroundImage: `url('${withBasePath("/images/space.jpg")}')` }}
             >
                 <div className="container">
                     <div className="row">

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { BASE_PATH } from "@/lib/base-path";
 
 const links = [
     { href: "/", label: "Home" },
@@ -10,8 +11,26 @@ const links = [
     { href: "/contact", label: "Contact" },
 ];
 
+function normalizePath(pathname: string): string {
+    let normalized = pathname || "/";
+
+    if (BASE_PATH && normalized.startsWith(BASE_PATH)) {
+        normalized = normalized.slice(BASE_PATH.length) || "/";
+    }
+
+    if (!normalized.startsWith("/")) {
+        normalized = `/${normalized}`;
+    }
+
+    if (normalized.length > 1 && normalized.endsWith("/")) {
+        normalized = normalized.slice(0, -1);
+    }
+
+    return normalized;
+}
+
 export function Navbar() {
-    const pathname = usePathname();
+    const pathname = normalizePath(usePathname());
     const navbarTheme = pathname === "/" ? "navbar-inverse" : "navbar-default";
 
     return (

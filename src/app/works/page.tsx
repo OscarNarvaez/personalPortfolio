@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { defaultProjects } from "@/lib/portfolio-data";
+import { withBasePath } from "@/lib/base-path";
 
 export default function WorksPage() {
     const projects = defaultProjects;
@@ -28,7 +29,7 @@ export default function WorksPage() {
                                                 <a title="Project preview" className="black-image-project-hover">
                                                     {project.image ? (
                                                         <Image
-                                                            src={project.image}
+                                                            src={withBasePath(project.image)}
                                                             alt={`${project.title} project preview`}
                                                             width={500}
                                                             height={320}

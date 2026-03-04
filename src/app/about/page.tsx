@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { withBasePath } from "@/lib/base-path";
 
 export default function AboutPage() {
     return (
@@ -43,7 +44,7 @@ export default function AboutPage() {
                                     </div>
                                     <div className="col-xs-12 col-md-6">
                                         <Image
-                                            src="/images/miyo.jpeg"
+                                            src={withBasePath("/images/miyo.jpeg")}
                                             className="img-responsive img-bordered fade-in-from-top profile-image"
                                             alt="Oscar Narvaez portrait"
                                             width={700}
