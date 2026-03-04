@@ -33,3 +33,15 @@ npm start
 - `/about` About me
 - `/works` Works
 - `/contact` Contact
+
+## Deploy en GitHub Pages
+
+Ya está configurado el workflow en [.github/workflows/deploy-pages.yml](.github/workflows/deploy-pages.yml).
+
+Solo debes:
+
+1. Subir cambios a la rama `main`.
+2. En GitHub, ir a **Settings → Pages**.
+3. En **Source**, seleccionar **GitHub Actions**.
+
+Con cada push a `main`, se publicará automáticamente.
