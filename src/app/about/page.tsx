@@ -23,7 +23,6 @@ export default function AboutPage() {
                                         </p>
 
                                         <br />
-                                        <br />
 
                                         <h2 style={{ fontSize: "15px", fontWeight: "700" }}>2. Skills</h2>
                                         <h4>Languages:</h4>
@@ -31,7 +30,6 @@ export default function AboutPage() {
                                         <h4>Frameworks:</h4>
                                         <p>React | Nodejs | Django</p>
 
-                                        <br />
                                         <br />
 
                                         <h2 style={{ fontSize: "15px", fontWeight: "700" }}>3. Passion and Motivation</h2>
