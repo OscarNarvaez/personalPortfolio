@@ -5,6 +5,7 @@ import "../../main.3f6952e4.css";
 import { Navbar } from "@/components/Navbar";
 import { BodyClassManager } from "@/components/BodyClassManager";
 import { SectionEntranceEffects } from "@/components/SectionEntranceEffects";
+import { MouseTrail } from "@/components/MouseTrail";
 
 export const metadata: Metadata = {
     title: "Portafolio | Oscar Narvaez",
@@ -32,6 +33,7 @@ export default function RootLayout({
     return (
         <html lang="es">
             <body>
+                <MouseTrail />
                 <BodyClassManager />
                 <SectionEntranceEffects />
                 <div id="site-border-left" />
