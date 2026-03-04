@@ -1,0 +1,46 @@
+import type { Metadata } from "next";
+import type { ReactNode } from "react";
+import "./globals.css";
+import "../../main.3f6952e4.css";
+import { Navbar } from "@/components/Navbar";
+import { BodyClassManager } from "@/components/BodyClassManager";
+import { SectionEntranceEffects } from "@/components/SectionEntranceEffects";
+
+export const metadata: Metadata = {
+    title: "Portafolio | Oscar Narvaez",
+    description: "Portafolio personal construido con Next.js, TypeScript, Tailwind y PostgreSQL.",
+    applicationName: "Portafolio Oscar Narvaez",
+    metadataBase: new URL("http://localhost:3000"),
+    openGraph: {
+        title: "Portafolio | Oscar Narvaez",
+        description: "Portafolio personal construido con Next.js, TypeScript, Tailwind y PostgreSQL.",
+        type: "website",
+        locale: "es_CO",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Portafolio | Oscar Narvaez",
+        description: "Portafolio personal construido con Next.js, TypeScript, Tailwind y PostgreSQL.",
+    },
+};
+
+export default function RootLayout({
+    children,
+}: Readonly<{
+    children: ReactNode;
+}>) {
+    return (
+        <html lang="es">
+            <body>
+                <BodyClassManager />
+                <SectionEntranceEffects />
+                <div id="site-border-left" />
+                <div id="site-border-right" />
+                <div id="site-border-top" />
+                <div id="site-border-bottom" />
+                <Navbar />
+                <main>{children}</main>
+            </body>
+        </html>
+    );
+}
