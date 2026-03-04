@@ -1,47 +1,8 @@
 import Image from "next/image";
-import { prisma } from "@/lib/db";
 import { defaultProjects } from "@/lib/portfolio-data";
 
-type ProjectCard = {
-    title: string;
-    description: string;
-    url: string;
-    image: string | null;
-};
-
-async function getProjects(): Promise<ProjectCard[]> {
-    if (!process.env.DATABASE_URL) {
-        return defaultProjects.map((project: ProjectCard) => ({
-            title: project.title,
-            description: project.description,
-            url: project.url,
-            image: project.image,
-        }));
-    }
-
-    try {
-        const projects = await prisma.project.findMany({
-            orderBy: { createdAt: "desc" },
-        });
-
-        return projects.map((project: ProjectCard) => ({
-            title: project.title,
-            description: project.description,
-            url: project.url,
-            image: project.image,
-        }));
-    } catch {
-        return defaultProjects.map((project: ProjectCard) => ({
-            title: project.title,
-            description: project.description,
-            url: project.url,
-            image: project.image,
-        }));
-    }
-}
-
-export default async function WorksPage() {
-    const projects = await getProjects();
+export default function WorksPage() {
+    const projects = defaultProjects;
 
     return (
         <div className="section-container">
